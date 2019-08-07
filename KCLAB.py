@@ -97,12 +97,17 @@ def dashboard():
 
     dnac = Obj_Dash.get_dnac_data(conn)
     print(dnac)
+
+    Obj_Dash = upd_datacenter.vcenter_db()
+    conn = Obj_Dash.connectdb()
+    vcenter = Obj_Dash.dashboard_data(conn)
+
     if g.user and g.role == 'admin':
         page_admin = ["Router_admin.html", "Switch_admin.html", "Wireless_admin.html", "Nexus_admin.html"]
-        return render_template("Dashboard.html", Dash=dict_dash, dnac=dnac, page=page_admin)
+        return render_template("Dashboard.html", Dash=dict_dash, dnac=dnac, page=page_admin,vcenter=vcenter)
     else:
         page = ["Router.html", "Switch.html", "Wireless.html", "Nexus.html"]
-        return render_template("Dashboard.html", Dash=dict_dash, dnac=dnac, page=page)
+        return render_template("Dashboard.html", Dash=dict_dash, dnac=dnac, page=page,vcenter=vcenter)
 
 """LAB: Router data"""
 @app.route('/Router.html', methods=['GET', 'POST'])

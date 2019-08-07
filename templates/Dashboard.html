@@ -91,6 +91,43 @@
 
 		</div>
 	</div>
+
+	<div class="card-header py-3">
+		<h6 class="m-0 font-weight-bold text-primary">vCenter/Blades</h6>
+	</div>
+	<div class="card-body">
+		<div class="table-responsive">
+			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+				<thead>
+					<tr>
+						<th>vCenter</th>
+						<th>Datacenter</th>
+						<th>UCS</th>
+						<th>VMs</th>
+					</tr>
+				</thead>
+				<!-- <tfoot>
+					<tr>
+						<th>Total</th>
+						<th>Reserved</th>
+						<th>Available</th>
+						<th>Unreachable</th>
+					</tr>
+				</tfoot>-->
+
+				<tbody>
+
+					<tr>
+						<td>{{ vcenter[0][0] }}</td>
+						<td>{{ vcenter[0][1] }}</td>
+						<td>{{ vcenter[0][2] }}</td>
+						<td>{{ vcenter[0][3] }}</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
 </div>
 
 {% endblock %}
