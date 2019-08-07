@@ -16,10 +16,10 @@
 	    <a class="nav-link active" id="devices-tab" data-toggle="tab" href="#devices" role="tab" aria-controls="devices" aria-selected="true">Devices</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" id="dnac-tab" data-toggle="tab" href="#dnac" role="tab" aria-controls="dnac" aria-selected="false">DNAC</a>
+	    <a class="nav-link" id="dnac-tab" data-toggle="tab" href="#dnac" role="tab" aria-controls="dnac" aria-selected="false">DNAC Topology Devices</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" id="blades-tab" data-toggle="tab" href="#blades" role="tab" aria-controls="blades" aria-selected="false">Blades</a>
+	    <a class="nav-link" id="blades-tab" data-toggle="tab" href="#blades" role="tab" aria-controls="blades" aria-selected="false">UCS details</a>
 	  </li>
 	</ul>
 	<div class="tab-content" id="myTabContent">
@@ -66,9 +66,12 @@
 
 									</div>
 								</div>
-							</div>
+</div>
 			{% endfor %}
-		</div>
+
+	</div>
+
+
 	  <div class="tab-pane fade" id="dnac" role="tabpanel" aria-labelledby="dnac-tab">
 			<br>
 			<div class="card shadow mb-4">
@@ -114,7 +117,7 @@
 				</div>
 				</div>
 		</div>
-	  <div class="tab-pane fade" id="blades" role="tabpanel" aria-labelledby="blades-tab">blades</div>
+	  <div class="tab-pane fade" id="blades" role="tabpanel" aria-labelledby="blades-tab">UCS devices</div>
 	</div>
 	</div>
 	</div>
