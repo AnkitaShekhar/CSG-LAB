@@ -1,7 +1,7 @@
 import sqlite3
 import json
 import datetime
-
+import xlrd
 con = sqlite3.connect("KCLAB.db")
 cur = con.cursor()
 #cur.execute('select component,ipaddress FROM DEVICES where rvsv="VIRL" order by component asc')
