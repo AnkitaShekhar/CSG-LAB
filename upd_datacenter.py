@@ -17,7 +17,7 @@ class vcenter_db():
     def get_vm(self, con):
         cur = con.cursor()
         print("Fetching VM data")
-        cur.execute("select virtualmachine, ipaddress, guestos, powerstate, uptime, datastore, esxi, datacenter, vcenter, cpu, memorey, hardisk from datacenter")
+        cur.execute("select virtualmachine, ipaddress, guestos, powerstate, uptime, datastore, esxi, datacenter, vcenter, cpu, memorey, hardisk, comment from datacenter")
         newlist = [row for row in list(cur)]
 
 
@@ -45,7 +45,7 @@ class vcenter_db():
     def get_esxi(self, con):
         cur = con.cursor()
         print("Fetching esxi data")
-        cur.execute("select DISTINCT esxi, bladecpu, bladevcpu, bladememory, bladehardisk, blademodel, esxiversion, datacenter, vcenter from datacenter")
+        cur.execute("select DISTINCT esxi, bladecpu, bladevcpu, bladememory, bladehardisk, blademodel, esxiversion, datacenter, vcenter, owner, cimcip, comment, bladereachability from datacenter")
         newlist = [row for row in list(cur)]
 
         newesxilist = []
