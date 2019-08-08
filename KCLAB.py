@@ -117,7 +117,6 @@ def dashboard():
         page = ["Router.html", "Switch.html", "Wireless.html", "Nexus.html"]
         return render_template("Dashboard.html", Dash=dict_dash, dnac=dnac, page=page, vcenter=vcenter)
 
-
 """LAB: Router data"""
 @app.route('/Router.html', methods=['GET', 'POST'])
 def router():
